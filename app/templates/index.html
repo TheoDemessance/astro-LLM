@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WebApp</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <h2>Chat with the Assistant</h2>
+        <div id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <textarea rows="4"id="user-input" placeholder="Type a message and press Enter"></textarea>
+        <div style="text-align: center;">
+            <button id="send-button">Send</button>
+            <button id="clear-button" class="clear-button">Clear Conversation</button>
+        </div>
+        <div id="loading-indicator">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById("chat-box");
+        const userInput = document.getElementById("user-input");
+        const sendButton = document.getElementById("send-button");
+        const clearButton = document.getElementById("clear-button");
+        const loadingIndicator = document.getElementById("loading-indicator");
+        sendButton.disabled = true;
+        sendButton.addEventListener("click", handleUserInput);
+        userInput.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                handleUserInput();
+            }
+
+        });
+        userInput.addEventListener("keyup", (event) => {
+            const userMessage = userInput.value;
+            //console.log("message '"+userMessage+"' length: "+userMessage .length);
+            if (event.key === "Enter") {
+                return;
+            }
+            if (userMessage .length === 0) {
+                sendButton.disabled = true;
+            }else{
+                sendButton.disabled = false; 
+            }
+        });
+
+        clearButton.addEventListener("click", () => {
+            chatBox.innerHTML = "";
+        });
+
+        async function handleUserInput() {
+            const userMessage = userInput.value;
+            const apiUrl = 'http://localhost:5000/gateway/chat/invocations';
+
+            if (userMessage) {
+                sendButton.disabled = true; // Disable the send button
+                loadingIndicator.style.display = "block"; // Show loading indicator
+
+                // Simulate API call with a 2-second delay
+                /*
+                setTimeout(() => {
+                    const mockResponse = "This is a mock response from the API.";
+                    // Display the response in the chat box
+                    displayMessage("User", userMessage, true);
+                    displayMessage("Assistant", mockResponse, false);
+                    userInput.value = "";
+                    sendButton.disabled = true;
+
+                    // Re-enable the send button and hide the loading indicator
+                    //sendButton.disabled = false;
+                    loadingIndicator.style.display = "none";
+                }, 2000); // 2-second delay
+                */
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'},
+                    body: JSON.stringify(userMessage)
+                });
+                const data = await response.json();
+                console.log(data);
+                const rep = data.predictions[0].answer
+                console.log(rep)
+                displayMessage("User", userMessage, true);
+                displayMessage("Assistant", rep, false);
+                loadingIndicator.style.display = "none";
+                userInput.value = "";
+                sendButton.disabled = true;
+            }
+        }
+
+        function displayMessage(role, content, isUser) {
+            const messageContainer = document.createElement("div");
+            if (isUser) {
+                messageContainer.classList.add("user-message-container");
+            } else {
+                messageContainer.classList.add("assistant-message-container");
+            }
+
+            const messageLabel = document.createElement("span");
+            messageLabel.classList.add("message-label");
+            messageLabel.innerText = role;
+
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add("message");
+            if (isUser) {
+                messageDiv.classList.add("user-message");
+            } else {
+                messageDiv.classList.add("assistant-message");
+            }
+            messageDiv.innerText = content;
+
+            messageContainer.appendChild(messageLabel);
+            messageContainer.appendChild(messageDiv);
+            chatBox.appendChild(messageContainer);
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#chat-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#user-input {
+    width: 92%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#send-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#loading-indicator {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lds-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #007BFF;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #007BFF transparent transparent transparent;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message-container {
+    max-width: 70%;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: column; /* Adjust to column layout */
+}
+
+.user-message-container {
+    max-width: 70%;
+    display: flex;
+    margin: 10px 0;
+    flex-direction: column; /* Adjust to column layout */
+}
+
+.assistant-message-container {
+    max-width: 70%;
+    display: flex;
+    margin: 10px 0;
+    padding-left: 30%;
+    flex-direction: column; /* Adjust to column layout */
+}
+
+.message-label {
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.user-message {
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 10px; /* Add border-radius */
+}
+
+.assistant-message {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 10px; /* Add border-radius */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px; /* Add border-radius */
+}
+
+.clear-button {
+    background-color: #FF3B30;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
