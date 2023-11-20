@@ -21,7 +21,7 @@ def chat_invocations():
             "dataframe_split": {
                 "columns": ["prompt"],
                 "index": [0],
-                "data": [[dataset]]
+                "data": [[dataset['query']]]
             }
         }
         data_json = json.dumps(ds_dict, allow_nan=True)

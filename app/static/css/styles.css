@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Lato', sans-serif;
+    background-color: #d8c9c6;
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #333;
 }
 
 h2 {
+    color: #E4070B;
     text-align: center;
 }
 
@@ -16,9 +20,13 @@ h2 {
     text-align: left;
     padding: 10px;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #E4070B;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+#user-input, #send-button, #clear-button {
+    border-color: #E4070B;
 }
 
 #user-input {
@@ -29,7 +37,7 @@ h2 {
 }
 
 #send-button {
-    background-color: #007BFF;
+    background-color: #E4070B;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -43,7 +51,7 @@ h2 {
 }
 
 #send-button:hover {
-    background-color: #0056b3;
+    background-color: #C3060A;
 }
 
 #loading-indicator {
@@ -65,10 +73,10 @@ h2 {
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #007BFF;
+    border: 8px solid #C3060A;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #007BFF transparent transparent transparent;
+    border-color: #C3060A transparent transparent transparent;
 }
 
 @keyframes lds-ring {
@@ -108,14 +116,14 @@ h2 {
 }
 
 .user-message {
-    background-color: #4CAF50;
+    background-color: #E4070B;
     color: #fff;
     border-radius: 10px; /* Add border-radius */
 }
 
 .assistant-message {
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #D8C9C6;
+    color: #333;
     border-radius: 10px; /* Add border-radius */
 }
 
