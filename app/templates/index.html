@@ -55,7 +55,7 @@
 
         async function handleUserInput() {
             const userMessage = userInput.value;
-            const apiUrl = '/gateway/chat/invocations';
+            const apiUrl = 'gateway/chat/invocations';
 
             if (userMessage) {
                 sendButton.disabled = true; // Disable the send button
@@ -82,9 +82,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: {
-                        "query": JSON.stringify(userMessage)
-                    }
+                    body: JSON.stringify({"query": userMessage})
                 });
 
                 const data = await response.json();
