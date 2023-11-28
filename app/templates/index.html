@@ -7,20 +7,45 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div id="chat-container">
-        <h2>Chat with the Assistant</h2>
-        <div id="chat-box">
-            <!-- Chat messages will be displayed here -->
-        </div>
-        <textarea rows="4"id="user-input" placeholder="Type a message and press Enter"></textarea>
-        <div style="text-align: center;">
-            <button id="send-button">Send</button>
-            <button id="clear-button" class="clear-button">Clear Conversation</button>
-        </div>
-        <div id="loading-indicator">
-            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-        </div>
-    </div>
+    <table width="90%" align="center" border="0">
+		<tr>
+		    <td>
+                <img src="static/images/logo.png" align="right" width="50" height="50" style="border-radius: 50%">*
+            </td>
+			<td>
+				<a href="https://www.mousquetaires.com/notre-groupement/">NOTRE GROUPEMENT</a>
+				<a href="https://www.mousquetaires.com/nos-engagements/">NOS ENGAGEMENTS</a>
+				<a href="https://www.mousquetaires.com/nos-enseignes/">NOS ENSEIGNES</a>
+				<a href="https://www.mousquetaires.com/nos-filiales/">NOS FILIALES</a>
+				<a href="https://www.mousquetaires.com/nos-actualites/">NOS ACTUALITES</a>
+			</td>
+			<td></td>
+		</tr>
+		<tr style="height:530px">
+			<td width="15%" valign="top" align="right"><br/>
+				<img src="static/images/astro.png" align="right" width="150" height="310" style="border-radius: 5%; opacity: 0.3">
+			</td>
+			<td width="70%" valign="top"><br/>
+				<div id="chat-container">
+					<img src="static/images/logo.png" align="left" width="160" height="100"><br/>
+					<h2><i>CHATBOT RH LES MOUSQUETAIRES</i></h2><br/><br/>
+					<div id="chat-box">
+						<!-- Chat messages will be displayed here -->
+					</div>
+					<textarea rows="7"id="user-input" placeholder="Veuillez taper votre question et cliquez sur envoyer"></textarea>
+					<div style="text-align: center;">
+						<button id="send-button">Envoyer</button>
+						<button id="clear-button" class="clear-button">Effacer la conversation</button>
+					</div>
+					<div id="loading-indicator">
+						<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+					</div>
+				</div>
+			</td>
+			<td width="15%" valign="top" align="left">
+			</td>
+		</tr>
+		</table>
 
     <script>
         const chatBox = document.getElementById("chat-box");
@@ -125,4 +150,3 @@
     </script>
 </body>
 </html>
-

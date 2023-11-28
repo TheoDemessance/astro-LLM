@@ -15,7 +15,7 @@ h2 {
 }
 
 #chat-container {
-    max-width: 400px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: left;
     padding: 10px;
@@ -89,24 +89,24 @@ h2 {
 }
 
 .message-container {
-    max-width: 70%;
+    max-width: 90%;
     display: flex;
     margin: 10px 0;
     flex-direction: column; /* Adjust to column layout */
 }
 
 .user-message-container {
-    max-width: 70%;
+    max-width: 90%;
     display: flex;
     margin: 10px 0;
     flex-direction: column; /* Adjust to column layout */
 }
 
 .assistant-message-container {
-    max-width: 70%;
+    max-width: 90%;
     display: flex;
     margin: 10px 0;
-    padding-left: 30%;
+    padding-left: 10%;
     flex-direction: column; /* Adjust to column layout */
 }
 
@@ -140,3 +140,16 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 7px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover, a:active {
+    background-color: red;
+  }
