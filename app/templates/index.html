@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Perspective Template, free css template</title>
-	<meta name="keywords" content="Perspective Template, free css template, download" />
-	<meta name="description" content="Perspective Template - Download free css template" />
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Astro - Votre Guide dans le monde de l'IA</title>
+
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/templatemo_style.css') }}">
 </head>
 <body>
@@ -12,7 +12,7 @@
 		<!--  Free Web Templates by TemplateMo.com  -->
 		<div id="templatemo_header">
 			<div id="site_title">
-				<a href="#" target="_parent"><br/><br/><i>STIME IA</i></a>
+				<a href="#" target="_parent"><br/><br/><i>Bienvenue sur le chatbot RH de la STIME</i></a>
 				<span><br/><i>Venez discuter avec le chatbot</i></span>        
 			</div>
 		</div>
@@ -20,24 +20,21 @@
 
 	<div id="templatemo_content_wrapper">
 		<div id="templatemo_content">
-		
 			<div id="templatemo_menu">
 				<div id="templatemo_menu_left"></div>
-				<ul>
-					<li><a href="index.html" class="current">Accueil</a></li>
-					<li><a href="#" target="_parent">Actualités</a></li>
-					<li><a href="#" target="_parent">Gallery</a></li>
-					<li><a href="#" target="_parent">Groupement</a></li>
-					<li><a href="#">À propos</a></li>
-					<li><a href="#" class="last">Contact</a></li>
-				</ul>    	
-			</div> <!-- end of menu -->
-
+					<ul>
+						<li><a href="{{ url_for('static', filename='templates/index.html') }}" class="current">Accueil</a></li>
+						<li><a href="#" target="_parent">Actualités</a></li>
+						<li><a href="#" target="_parent">Gallery</a></li>
+						<li><a href="#" target="_parent">Groupement</a></li>
+						<li><a href="#">À propos</a></li>
+						<li><a href="#" class="last">Contact</a></li>
+					</ul>    	
+				</div> <!-- end of menu -->
 			<div id="content_column">
 				<div class="post_section">
 					<div class="header_01">Posez votre question ici</div>
 					<div class="post_info"><i>Astro ne va pas tarder à vous répondre</i></div>
-				
 					<div id="chat-container">
 						<div id="chat-box">
 							<!-- Chat messages will be displayed here -->
@@ -152,83 +149,76 @@
 							chatBox.appendChild(messageContainer);
 						}
 					</script>
-					
-					
-					
-					
-					<br/><br/><br/><br/><hr width="100%"/><br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<hr width="100%"/>
+					<br/>
 					<div class="post_content">
-						
 						<p>
-						Un chatbot, ou dialogueur ou encore agent conversationnel, est un agent logiciel qui dialogue avec un utilisateur.                
+							Un chatbot, ou dialogueur ou encore agent conversationnel, est un agent logiciel qui dialogue avec un utilisateur.                
 						</p>
-					<p>
-					Il existe différents types de chatbots :
-
-						<br/>- les chatbots simples, basés sur des règles : ces bots fonctionnent sur la base de questions et de scénarios prédéfinis, en suivant une arborescence de conversation linéaire. En général, ce type de chatbot propose à l’utilisateur d’interagir en appuyant sur des boutons, qui redirigent ensuite vers les différents scénarios.
-						<br/>- les chatbots intelligents, qui utilisent l’IA : ces bots ont la capacité de comprendre le langage naturel, et peuvent décortiquer les phrases pour analyser l’intention de l’utilisateur. De ce fait, à chaque échange, ces chatbots améliorent un peu plus leurs performances grâce au système de machine learning (apprentissage automatique). À titre d’exemple, un chatbot intelligent aura la capacité de comprendre un mot mal orthographié, tandis qu’un chatbot simple ne pourra pas donner de réponse.
-						<br/>- les chatbots hybrides : ces bots vont mêler l’intelligence artificielle et l’intervention humaine. Concrètement, si l’agent conversationnel n’arrive pas à satisfaire la requête d’un internaute, un agent humain prendra le relai.
-					</p>
+						<p>
+							Il existe différents types de chatbots :
+							<br/>- les chatbots simples, basés sur des règles : ces bots fonctionnent sur la base de questions et de scénarios prédéfinis, en suivant une arborescence de conversation linéaire. En général, ce type de chatbot propose à l’utilisateur d’interagir en appuyant sur des boutons, qui redirigent ensuite vers les différents scénarios.
+							<br/>- les chatbots intelligents, qui utilisent l’IA : ces bots ont la capacité de comprendre le langage naturel, et peuvent décortiquer les phrases pour analyser l’intention de l’utilisateur. De ce fait, à chaque échange, ces chatbots améliorent un peu plus leurs performances grâce au système de machine learning (apprentissage automatique). À titre d’exemple, un chatbot intelligent aura la capacité de comprendre un mot mal orthographié, tandis qu’un chatbot simple ne pourra pas donner de réponse.
+							<br/>- les chatbots hybrides : ces bots vont mêler l’intelligence artificielle et l’intervention humaine. Concrètement, si l’agent conversationnel n’arrive pas à satisfaire la requête d’un internaute, un agent humain prendra le relai.
+						</p>
 					</div>	
 					<hr width="100%"/>				
-				</div>
-							
-			</div> <!-- end of content column -->
-					
+				</div>			
+			</div> <!-- end of content column -->		
 			<div id="side_column_wrapper">
-			<div id="side_column">
-					
-					<div class="section_w260">
-						<div class="ads_125_125 margin_right_10">
-							<a href="#"><img src="static/css/images/astro2.png" alt="image" /></a>
-						</div>
-						<div class="ads_125_125">
-							<a href="#"><img src="static/css/images/stime_logo.jpg" alt="image" /></a>
-						</div>
-						<div class="ads_125_125 margin_right_10">
-							<a href="#"><img src="static/css/images/stime_logo.jpg" alt="image" /></a>
-						</div>
-						<div class="ads_125_125">
-							<a href="#"><img src="static/css/images/astro2.png" alt="image" /></a>
-						</div>
-						
-						<div class="cleaner"></div>
+			<div id="side_column">	
+				<div class="section_w260">
+					<div class="ads_125_125 margin_right_10">
+						<a href="#"><img src="static/css/images/astro2.png" alt="image" /></a>
+					</div>
+					<div class="ads_125_125">
+						<a href="#"><img src="static/css/images/stime_logo.jpg" alt="image" /></a>
+					</div>
+					<div class="ads_125_125 margin_right_10">
+						<a href="#"><img src="static/css/images/stime_logo.jpg" alt="image" /></a>
+					</div>
+					<div class="ads_125_125">
+						<a href="#"><img src="static/css/images/astro2.png" alt="image" /></a>
 					</div>
 					
-					<div class="section_w260">
-						<div class="header_02">Actualités en temps réel</div>
-						<div class="recent_post">
-						<div class="header_04"><a href="#">28 novembre 2023</a></div>
-							Bricorama et Accenture s’associent pour lancer pAInt, l’expert peinture alimenté par l’Intelligence Artificielle (IA) générative
-						</div>
-						
-						<div class="recent_post">
-						<div class="header_04"><a href="#">16 novembre 2023</a></div>
-							Le Groupement Les Mousquetaires se mobilise à l’occasion de la SEEPH avec une opération audacieuse, « Tous Mousquetaires »
-						</div>
-						
-						<div class="recent_post"><div class="header_04"><a href="#">30 novembre 2023</a></div>
-							Le Groupement Les Mousquetaires s’engage à accueillir jusqu’à 6 000 stagiaires de seconde en juin 2024
-					</div>    
+					<div class="cleaner"></div>
+				</div>
+					
+				<div class="section_w260">
+					<div class="header_02">Actualités en temps réel</div>
+					<div class="recent_post">
+					<div class="header_04"><a href="#">28 novembre 2023</a></div>
+						Bricorama et Accenture s’associent pour lancer pAInt, l’expert peinture alimenté par l’Intelligence Artificielle (IA) générative
 					</div>
 					
-					<div class="section_w260">
-						<div class="header_02">Voir plus ..</div>
-						<ul class="side_column_list">
-							<li><a href="#" target="_blank">Intermarché innove</a></li>
-							<li><a href="#" target="_parent">L'Ecole des métiers</a></li>
-							<li><a href="#" target="_parent">Intermarché renforce</a></li>
-							<li><a href="#" target="_blank">Netto lance</a></li>
-							<li><a href="#">Le groupement</a></li>
-						</ul>
-					</div> 
-						
+					<div class="recent_post">
+					<div class="header_04"><a href="#">16 novembre 2023</a></div>
+						Le Groupement Les Mousquetaires se mobilise à l’occasion de la SEEPH avec une opération audacieuse, « Tous Mousquetaires »
+					</div>
+					
+					<div class="recent_post"><div class="header_04"><a href="#">30 novembre 2023</a></div>
+						Le Groupement Les Mousquetaires s’engage à accueillir jusqu’à 6 000 stagiaires de seconde en juin 2024
+				</div>    
+				</div>
+				
+				<div class="section_w260">
+					<div class="header_02">Voir plus ..</div>
+					<ul class="side_column_list">
+						<li><a href="#" target="_blank">Intermarché innove</a></li>
+						<li><a href="#" target="_parent">L'Ecole des métiers</a></li>
+						<li><a href="#" target="_parent">Intermarché renforce</a></li>
+						<li><a href="#" target="_blank">Netto lance</a></li>
+						<li><a href="#">Le groupement</a></li>
+					</ul>
+				</div> 		
 			</div> <!-- end of side column -->
 			</div>
-			
 			<div class="cleaner"></div>
 		</div> <!-- end of content -->
-		
 		<div class="cleaner"></div>
 	</div> <!-- end of content wrapper -->
 </body>
